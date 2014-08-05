@@ -110,7 +110,7 @@ unset GIT_DIR # unset git dir or it will mess with goinstall
 
 echo "DUG"
 echo "PWD:$PWD"
-find . -type d -print
+find staged -type d -print
 echo "eDUG"
 
 if test -f $p/Godeps
