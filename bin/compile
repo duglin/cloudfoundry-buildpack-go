@@ -46,7 +46,7 @@ else
     echo "  done in $(($te-$ts))s"
 fi
 export GOROOT=$cache/go
-export GOPATH=$build/.cf/go
+export GOPATH=$build/.cf/go:$build/app
 
 # Check if Mercurial and Bazaar are installed
 if ! (which hg > /dev/null && which bzr > /dev/null)
