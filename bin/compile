@@ -46,7 +46,7 @@ else
     echo "  done in $(($te-$ts))s"
 fi
 export GOROOT=$cache/go
-export GOPATH=$build/.cf/go:$build/app
+export GOPATH=$build/.cf/go
 
 # Check if Mercurial and Bazaar are installed
 if ! (which hg > /dev/null && which bzr > /dev/null)
@@ -110,7 +110,7 @@ unset GIT_DIR # unset git dir or it will mess with goinstall
 
 echo "DUG"
 echo "PWD:$PWD"
-find staged -type d -print
+#find staged -type d -print
 echo "eDUG"
 
 if test -f $p/Godeps
@@ -130,7 +130,7 @@ then
 
     echo -n " Running 'go install'..."
     ts=`date +%s`
-    go install
+    GOPATH=$GOPATH:$build/app go install
     te=`date +%s`
     echo "  done in $(($te-$ts))s"
 else
