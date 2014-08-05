@@ -130,7 +130,7 @@ then
 
     echo -n " Running 'go install'..."
     ts=`date +%s`
-    GOPATH=$GOPATH:$build/app go install
+    GOPATH=$GOPATH:$build go install
     te=`date +%s`
     echo "  done in $(($te-$ts))s"
 else
