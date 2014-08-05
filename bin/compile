@@ -107,6 +107,12 @@ unset GIT_DIR # unset git dir or it will mess with goinstall
 
 # If Godeps file present, use godep to fetch dependencies,
 # otherwise use straight up "go get"
+
+echo "DUG"
+echo "PWD:$PWD"
+ls -R
+echo "DUG"
+
 if test -f $p/Godeps
 then
     echo -n " Fetching godep..."
